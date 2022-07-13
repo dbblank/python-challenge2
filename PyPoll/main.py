@@ -30,7 +30,7 @@ with open(election_data, newline = "") as csvfile:
     for votes in num_votes:
         percentage = (votes/total_votes) * 100
         percentage = round(percentage)
-        percentage = "%.3f%%" % percentage
+        percentage = "{:.3%}"
         percent_votes.append(percentage)
 
     winner = max(num_votes)
